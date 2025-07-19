@@ -6,11 +6,17 @@
 
     <groupId>com.pruandri</groupId>
     <artifactId>devops_tp</artifactId>
-    <version>1.0-SNAPSHOT</version> <!-- garde ça pour snapshot, sinon mets 1.0 -->
+    <version>1.0-SNAPSHOT</version>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
         <maven.compiler.target>21</maven.compiler.target>
+        
+        <!-- SonarQube -->
+        <sonar.projectKey>devops_tp</sonar.projectKey>
+        <sonar.projectName>devops_tp</sonar.projectName>
+        <sonar.host.url>http://localhost:9000</sonar.host.url>
+        <!-- <sonar.login>token</sonar.login> -->
     </properties>
 
     <build>
@@ -24,6 +30,13 @@
                     <source>${maven.compiler.source}</source>
                     <target>${maven.compiler.target}</target>
                 </configuration>
+            </plugin>
+
+            <!-- Sonar plugin -->
+            <plugin>
+                <groupId>org.sonarsource.scanner.maven</groupId>
+                <artifactId>sonar-maven-plugin</artifactId>
+                <version>3.9.1.2184</version>
             </plugin>
         </plugins>
     </build>
@@ -40,6 +53,6 @@
             <url>http://localhost:8081/repository/maven-snapshots/</url>
         </snapshotRepository>
     </distributionManagement>
-
 </project>
+
 
