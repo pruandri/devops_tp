@@ -16,7 +16,7 @@
         <sonar.projectKey>devops_tp</sonar.projectKey>
         <sonar.projectName>devops_tp</sonar.projectName>
         <sonar.host.url>http://localhost:9000</sonar.host.url>
-        <!-- <sonar.login>token</sonar.login> -->
+        <sonar.login>sqp_651488b024b96cae2ca7e69b7ee0759bf9ee13a8</sonar.login>
     </properties>
 
     <build>
